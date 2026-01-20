@@ -3,721 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masch Architectural Systems LLC | Business Support & Facility Solutions</title>
-    <meta name="description" content="Premier administrative and business support services for the architectural and facility management sectors. Based in Ann Arbor, MI.">
+    <title>WE ARCHITECTURE LLC | Miami's Modern Vision</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Prata&display=swap" rel="stylesheet">
     <style>
-        /* * ==========================================
-         * CORE VARIABLES & RESET
-         * ==========================================
-         */
         :root {
-            /* Palette: Corporate, Structured, Reliable */
-            --primary-color: #0F2027; /* Deep Navy/Black */
-            --secondary-color: #203A43; /* Teal/Slate */
-            --accent-color: #2C5364; /* Lighter Slate */
-            --highlight-color: #3498db; /* Tech Blue */
-            --text-main: #333333;
-            --text-muted: #666666;
-            --bg-light: #f8f9fa;
-            --white: #ffffff;
-            --font-primary: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            --container-width: 1200px;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: var(--font-primary);
-            color: var(--text-main);
-            background-color: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* * ==========================================
-         * TYPOGRAPHY
-         * ==========================================
-         */
-        h1, h2, h3, h4 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            letter-spacing: -1px;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        h3 {
-            font-size: 1.4rem;
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 4rem;
-        }
-
-        .section-header h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--highlight-color);
-            margin: 20px auto 0;
-            border-radius: 2px;
-        }
-
-        /* * ==========================================
-         * LAYOUT UTILITIES
-         * ==========================================
-         */
-        .container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        section {
-            padding: 100px 0;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 50px;
-            align-items: center;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 32px;
-            background-color: var(--highlight-color);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        /* * ==========================================
-         * HEADER
-         * ==========================================
-         */
-        header {
-            background: var(--white);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: var(--highlight-color);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 500;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--highlight-color);
-        }
-
-        /* * ==========================================
-         * HERO SECTION
-         * ==========================================
-         */
-        .hero {
-            /* Background: Abstract architectural structure/glass building */
-            background: linear-gradient(rgba(15, 32, 39, 0.85), rgba(32, 58, 67, 0.85)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            color: var(--white);
-            padding-top: 80px;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            color: var(--white);
-            margin-bottom: 25px;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            color: #ecf0f1;
-            margin-bottom: 40px;
-            font-weight: 300;
-            border-left: 5px solid var(--highlight-color);
-            padding-left: 20px;
-        }
-
-        /* * ==========================================
-         * ABOUT SECTION
-         * ==========================================
-         */
-        .about-section {
-            background-color: var(--white);
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-        }
-
-        .about-stats {
-            display: flex;
-            gap: 40px;
-            margin-top: 30px;
-        }
-
-        .stat-item h4 {
-            font-size: 2.5rem;
-            color: var(--highlight-color);
-            margin-bottom: 5px;
-        }
-
-        .stat-item span {
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        /* * ==========================================
-         * SERVICES
-         * ==========================================
-         */
-        .services-section {
-            background-color: var(--bg-light);
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 4px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
-            border-top: 4px solid transparent;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            border-top-color: var(--highlight-color);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .service-icon {
-            font-size: 2rem;
-            color: var(--highlight-color);
-            margin-bottom: 20px;
-            display: inline-block;
-            background: rgba(52, 152, 219, 0.1);
-            padding: 15px;
-            border-radius: 50%;
-        }
-
-        /* * ==========================================
-         * WHY US / ADVANTAGES
-         * ==========================================
-         */
-        .advantages-section {
-            background-color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .advantage-item {
-            display: flex;
-            margin-bottom: 40px;
-        }
-
-        .advantage-number {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #eeeeee;
-            margin-right: 20px;
-            line-height: 1;
-        }
-
-        .advantage-content h3 {
-            margin-top: 10px;
-            font-size: 1.3rem;
-        }
-
-        .feature-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 4px;
-            box-shadow: 20px 20px 0 var(--bg-light);
-        }
-
-        /* * ==========================================
-         * PROCESS
-         * ==========================================
-         */
-        .process-section {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        .process-section h2 { color: var(--white); }
-        .process-section p { color: rgba(255,255,255,0.7); }
-
-        .process-timeline {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
-            margin-top: 60px;
-            position: relative;
-        }
-
-        .process-step {
-            padding: 40px;
-            border-right: 1px solid rgba(255,255,255,0.1);
-            position: relative;
-        }
-
-        .process-step:last-child {
-            border-right: none;
-        }
-
-        .step-icon {
-            font-size: 2rem;
-            color: var(--highlight-color);
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .process-step h3 {
-            color: var(--white);
-        }
-
-        /* * ==========================================
-         * CONTACT
-         * ==========================================
-         */
-        .contact-section {
-            background-color: var(--white);
-            padding-bottom: 0;
-        }
-
-        .contact-box {
-            background: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 0 40px rgba(0,0,0,0.08);
-            overflow: hidden;
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: -50px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .contact-info-panel {
-            flex: 1;
-            background: var(--secondary-color);
-            color: var(--white);
-            padding: 60px;
-            min-width: 300px;
-        }
-
-        .contact-info-panel h3 { color: var(--white); margin-bottom: 30px; }
-
-        .info-row {
-            margin-bottom: 30px;
-        }
-
-        .info-label {
-            display: block;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0.7;
-            margin-bottom: 5px;
-        }
-
-        .info-value {
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        .contact-form-panel {
-            flex: 1.5;
-            padding: 60px;
-            min-width: 300px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--secondary-color);
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--highlight-color);
-        }
-
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        /* * ==========================================
-         * FOOTER
-         * ==========================================
-         */
-        footer {
-            background: #1e1e1e;
-            color: #888;
-            padding: 100px 0 40px;
-            text-align: center;
-        }
-
-        .footer-content {
-            border-top: 1px solid #333;
-            padding-top: 40px;
-        }
-
-        /* * ==========================================
-         * RESPONSIVE
-         * ==========================================
-         */
-        @media (max-width: 992px) {
-            h1 { font-size: 2.8rem; }
-            .grid-3, .grid-2 { grid-template-columns: 1fr; }
-            .process-timeline { grid-template-columns: 1fr; }
-            .process-step { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-            .contact-box { flex-direction: column; }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            section { padding: 60px 0; }
-            h1 { font-size: 2.2rem; }
+            --brand-dark: #121212;
+            --brand-accent: #e0e0e0;
+            --brand-gold: #b0915f;
+            --bg-light: #fcfcfc;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Outfit', sans-serif; color: var(--brand-dark); line-height: 1.7; background: var(--bg-light); overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Prata', serif; font-weight: 400; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+        section { padding: 120px 0; border-bottom: 1px solid #eee; }
+        .btn { display: inline-block; padding: 18px 40px; border: 1px solid var(--brand-dark); background: transparent; color: var(--brand-dark); cursor: pointer; transition: var(--transition); letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; font-weight: 600; }
+        .btn:hover { background: var(--brand-dark); color: #fff; transform: translateY(-3px); }
+
+        /* 1. HERO SCREEN */
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070') center/cover; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 20px; color: var(--brand-dark); }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; font-weight: 300; letter-spacing: 1px; color: #444; }
+
+        /* 2. ABOUT US */
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .about-text h2 { font-size: 2.8rem; margin-bottom: 30px; line-height: 1.2; }
+        .about-text p { font-size: 1.1rem; margin-bottom: 25px; color: #555; }
+
+        /* 3. SERVICES */
+        .services-header { text-align: center; margin-bottom: 80px; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .service-box { padding: 40px; background: #fff; border: 1px solid #f0f0f0; transition: var(--transition); }
+        .service-box:hover { border-color: var(--brand-gold); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .service-box h3 { margin-bottom: 20px; font-size: 1.6rem; }
+        .service-box p { font-size: 0.95rem; color: #666; }
+
+        /* 4 & 5. FEATURE BLOCKS (ADVANTAGES & SOLUTIONS) */
+        .feature-block { padding: 100px 0; display: flex; align-items: center; gap: 60px; }
+        .feature-block.reverse { flex-direction: row-reverse; }
+        .feature-img { flex: 1; height: 500px; background-size: cover; background-position: center; border-radius: 2px; }
+        .feature-info { flex: 1; }
+        .feature-info h2 { font-size: 2.5rem; margin-bottom: 25px; }
+        .adv-list { list-style: none; }
+        .adv-item { margin-bottom: 30px; }
+        .adv-item h4 { font-size: 1.2rem; margin-bottom: 5px; color: var(--brand-gold); }
+
+        /* 6. CONTACT FORM */
+        .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px 0; border: none; border-bottom: 1px solid #ccc; background: transparent; font-family: inherit; margin-bottom: 30px; outline: none; transition: 0.3s; }
+        .contact-form input:focus { border-bottom-color: var(--brand-gold); }
+
+        /* 7. CONTACTS / FOOTER */
+        footer { padding: 80px 0; background: #111; color: #fff; text-align: center; }
+        .foot-meta { margin-bottom: 40px; }
+        .foot-meta p { font-size: 1rem; opacity: 0.8; margin-bottom: 10px; }
+        .foot-meta b { color: var(--brand-gold); font-weight: 400; letter-spacing: 1px; }
+        .copy { font-size: 0.75rem; opacity: 0.4; text-transform: uppercase; letter-spacing: 2px; border-top: 1px solid #222; padding-top: 40px; }
+
+        @media (max-width: 900px) {
+            .about-content, .services-grid, .feature-block, .contact-wrap { grid-template-columns: 1fr; flex-direction: column !important; }
+            .hero h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">Masch <span>Systems</span></a>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#why-us">Expertise</a></li>
-                    <li><a href="#process">Process</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <section class="hero">
-        <div class="container hero-content">
-            <h1>Engineered Support for the Built Environment</h1>
-            <p class="hero-subtitle">
-                Masch Architectural Systems LLC delivers precision administrative and operational support services. We optimize the systems that power successful architectural and facility projects.
-            </p>
-            <a href="#contact" class="btn">Schedule a Consultation</a>
+        <div class="container">
+            <h1>Elevating the Art of Living</h1>
+            <p>WE ARCHITECTURE LLC delivers bespoke structural solutions where Florida’s coastal elegance meets cutting-edge engineering precision.</p>
         </div>
     </section>
 
-    <section id="about" class="about-section">
+    <section class="about">
         <div class="container">
-            <div class="grid-2">
+            <div class="about-content">
                 <div class="about-text">
-                    <h2>Operational Excellence in Ann Arbor</h2>
-                    <p>
-                        Masch Architectural Systems LLC is a dedicated business support firm based in Ann Arbor, Michigan. We specialize in the "systems" behind the structures—providing the critical administrative, logistical, and remediation support that architectural firms and facility managers require to operate efficiently.
-                    </p>
-                    <p>
-                        Unlike traditional design studios, our focus is on the operational backbone of the industry. We bridge the gap between complex project requirements and streamlined business execution. Our team understands that successful buildings rely as much on rigorous documentation and process management as they do on blueprints.
-                    </p>
-                    <p>
-                        From waste management coordination to office administrative services, we act as the silent partner that ensures your projects remain compliant, organized, and on schedule. We take pride in supporting the professionals who build our world.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h4>100%</h4>
-                            <span>Compliance Focus</span>
-                        </div>
-                        <div class="stat-item">
-                            <h4>MI</h4>
-                            <span>Locally Owned</span>
-                        </div>
-                    </div>
+                    <h2>Designing Environments, Not Just Buildings</h2>
+                    <p>Established in the vibrant heart of Miami Springs, WE ARCHITECTURE LLC is a specialized firm led by Reynold Diaz. We believe that architecture should be a seamless dialogue between the inhabitant and the horizon.</p>
+                    <p>Our studio focuses on high-performance design that respects the unique meteorological demands of the Florida landscape while pushing the boundaries of aesthetic luxury.</p>
+                    <p>With nearly half a million dollars in modeled annual revenue, we represent a stable, trusted partner for residential and commercial developers seeking distinction.</p>
+                    <p>Every line we draw is calculated to maximize spatial flow, natural lighting, and long-term structural value for our clients.</p>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Office Administration" class="feature-image">
+                <div class="feature-img" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070');"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="services-header">
+                <h2>Specialized Architectural Practices</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-box">
+                    <h3>Technical Consulting</h3>
+                    <p>We provide in-depth analysis of site potential and zoning restrictions to ensure your investment is feasible from day one. Our team bridges the gap between creative vision and complex professional scientific services. We minimize risk through data-driven planning.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Residential Synthesis</h3>
+                    <p>Crafting private sanctuaries that reflect individual legacy is our primary passion. We manage the entire lifecycle of architectural engineering and related services for luxury estates. Our designs prioritize both intimacy and grand-scale entertaining.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Specialized Design</h3>
+                    <p>From sustainable materials to high-impact tropical aesthetics, we offer specialized design services tailored for the Miami climate. We integrate smart technology and eco-conscious engineering into the very fabric of the building. Beauty meets peak performance.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Core Support Capabilities</h2>
-                <p>We provide a comprehensive suite of business services tailored for the property and construction sectors.</p>
-            </div>
-            <div class="grid-3">
-                <article class="service-card">
-                    <span class="service-icon">📊</span>
-                    <h3>Project Administration</h3>
-                    <p>
-                        We handle the intricate administrative layers of architectural projects. This includes document control, contract administration, and timeline tracking to ensuring that all stakeholders have the information they need, when they need it. We reduce the administrative burden on your creative teams.
-                    </p>
-                </article>
-
-                <article class="service-card">
-                    <span class="service-icon">🏢</span>
-                    <h3>Facility Support Services</h3>
-                    <p>
-                        Our team coordinates the ongoing operational needs of physical assets. We develop and manage maintenance schedules, vendor coordination, and systems checks to ensure facility integrity. This ensures your buildings continue to perform at peak efficiency long after construction is complete.
-                    </p>
-                </article>
-
-                <article class="service-card">
-                    <span class="service-icon">🔄</span>
-                    <h3>Remediation & Waste Management</h3>
-                    <p>
-                        We provide specialized logistical support for remediation projects and waste management planning. Navigating the regulatory landscape of waste disposal and environmental compliance is complex; we provide the administrative oversight to ensure full adherence to local and federal codes.
-                    </p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-us" class="advantages-section">
-        <div class="container">
-            <div class="grid-2">
-                <div class="image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Business Strategy" class="feature-image">
-                </div>
-                <div class="advantages-content">
-                    <h2>The Masch Advantage</h2>
-                    <p style="margin-bottom: 40px;">Why industry leaders in Michigan trust our support systems.</p>
-                    
-                    <div class="advantage-item">
-                        <div class="advantage-number">01</div>
-                        <div class="advantage-content">
-                            <h3>Specialized Industry Knowledge</h3>
-                            <p>We are not a generalist admin firm. We understand the specific terminologies, timelines, and pressure points unique to the architectural and support services industry.</p>
-                        </div>
+    <section class="feature-block">
+        <div class="container" style="display: flex; gap: 60px; align-items: center;">
+            <div class="feature-img" style="background-image: url('https://images.unsplash.com/photo-1487958449913-d92799063718?q=80&w=2070');"></div>
+            <div class="feature-info">
+                <h2>Why Developers Choose WE</h2>
+                <div class="adv-list">
+                    <div class="adv-item">
+                        <h4>Principal-Led Precision</h4>
+                        <p>Unlike massive firms, your project is personally overseen by Reynold Diaz, ensuring executive accountability and master-level craftsmanship.</p>
                     </div>
-
-                    <div class="advantage-item">
-                        <div class="advantage-number">02</div>
-                        <div class="advantage-content">
-                            <h3>Systems-First Approach</h3>
-                            <p>We believe that efficiency comes from repeatable, robust systems. We don't just solve immediate problems; we implement frameworks that prevent future issues.</p>
-                        </div>
+                    <div class="adv-item">
+                        <h4>Regional Intelligence</h4>
+                        <p>Operating from Miami Springs, we possess intimate knowledge of local geotechnical conditions and the Florida Building Code.</p>
                     </div>
-
-                    <div class="advantage-item">
-                        <div class="advantage-number">03</div>
-                        <div class="advantage-content">
-                            <h3>Local Regulatory Insight</h3>
-                            <p>Based in Ann Arbor, we possess deep insight into Michigan's specific administrative requirements for business support and waste management compliance.</p>
-                        </div>
+                    <div class="adv-item">
+                        <h4>Boutique Focus</h4>
+                        <p>We maintain a selective project load to ensure that every client receives our undivided attention and rapid response times.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="process" class="process-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Workflow</h2>
-                <p>A transparent, step-by-step approach to optimizing your operations.</p>
-            </div>
-            <div class="process-timeline">
-                <div class="process-step">
-                    <span class="step-icon">🔍</span>
-                    <h3>1. Audit & Assessment</h3>
-                    <p>
-                        We begin by reviewing your current administrative workflows and facility support needs. We identify bottlenecks, compliance gaps, and areas where efficiency is being lost.
-                    </p>
-                </div>
-
-                <div class="process-step">
-                    <span class="step-icon">⚙️</span>
-                    <h3>2. System Implementation</h3>
-                    <p>
-                        Based on our findings, we deploy tailored support structures. This may involve setting up new documentation protocols, organizing vendor contracts, or establishing maintenance schedules.
-                    </p>
-                </div>
-
-                <div class="process-step">
-                    <span class="step-icon">📈</span>
-                    <h3>3. Management & Optimization</h3>
-                    <p>
-                        We provide ongoing support to ensure the new systems function correctly. We monitor performance metrics and adjust our administrative strategies to scale with your business growth.
-                    </p>
+    <section class="feature-block reverse">
+        <div class="container" style="display: flex; flex-direction: row-reverse; gap: 60px; align-items: center;">
+            <div class="feature-img" style="background-image: url('https://images.unsplash.com/photo-1503387762-592dea58ef21?q=80&w=2062');"></div>
+            <div class="feature-info">
+                <h2>The Evolution of a Project</h2>
+                <div class="adv-list">
+                    <div class="adv-item">
+                        <h4>1. Discovery & Analysis</h4>
+                        <p>We conduct a thorough audit of your site and goals, identifying challenges and opportunities before the first sketch is made.</p>
+                    </div>
+                    <div class="adv-item">
+                        <h4>2. Iterative Design</h4>
+                        <p>Through 3D modeling and material sampling, we refine the concept until it perfectly captures your intended lifestyle and aesthetic.</p>
+                    </div>
+                    <div class="adv-item">
+                        <h4>3. Implementation Oversight</h4>
+                        <p>We remain your advocate on the construction site, ensuring contractors adhere strictly to the architectural blueprints and quality standards.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section class="contact-area">
         <div class="container">
-            <div class="section-header">
-                <h2>Connect With Us</h2>
-                <p>Ready to streamline your architectural support systems? Reach out today.</p>
-            </div>
-            
-            <div class="contact-box">
-                <div class="contact-info-panel">
-                    <h3>Company Details</h3>
-                    
-                    <div class="info-row">
-                        <span class="info-label">Headquarters</span>
-                        <div class="info-value">
-                            4989 Red Fox Run<br>
-                            Ann Arbor, MI 48105-9530<br>
-                            United States
-                        </div>
-                    </div>
-
-                    <div class="info-row">
-                        <span class="info-label">Direct Inquiry</span>
-                        <div class="info-value">
-                            <a href="mailto:infos@mascharchitecturalsystems.pro" style="color: white; text-decoration: none;">infos@mascharchitecturalsystems.pro</a>
-                        </div>
-                    </div>
-
-                    <div class="info-row">
-                        <span class="info-label">Classification</span>
-                        <div class="info-value">Business Support Services</div>
-                    </div>
+            <div class="contact-wrap">
+                <div>
+                    <h2>Begin Your Structural Legacy</h2>
+                    <p style="margin-top: 20px;">Contact our Miami Springs studio to schedule a private consultation. We look forward to hearing about your vision.</p>
                 </div>
-
-                <div class="contact-form-panel">
+                <div class="contact-form">
                     <form>
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" class="form-control" placeholder="Your Name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" class="form-control" placeholder="name@company.com">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Service Required</label>
-                            <select class="form-control">
-                                <option>General Inquiry</option>
-                                <option>Project Administration</option>
-                                <option>Facility Support</option>
-                                <option>Waste Management/Remediation</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea class="form-control" placeholder="How can we assist your operations?"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn" style="width: 100%;">Submit Request</button>
+                        <input type="text" placeholder="Full Name">
+                        <input type="email" placeholder="Email Address">
+                        <textarea placeholder="Tell us about your project location and goals" rows="4"></textarea>
+                        <button type="submit" class="btn">Submit Inquiry</button>
                     </form>
                 </div>
             </div>
@@ -726,14 +182,15 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <p class="logo" style="color: #fff; margin-bottom: 20px;">Masch <span>Systems</span></p>
-                <p>&copy; 2024 Masch Architectural Systems LLC. All Rights Reserved.</p>
-                <p style="font-size: 0.9rem; opacity: 0.6;">Ann Arbor, MI &bull; infos@mascharchitecturalsystems.pro</p>
+            <div class="foot-meta">
+                <p><b>Studio:</b> 265 De Leon Dr, Miami Springs, FL, 33166-5901, United States</p>
+                <p><b>Inquiries:</b> info@wearchitecture.pro</p>
+            </div>
+            <div class="copy">
+                &copy; 2026 WE ARCHITECTURE LLC. All Rights Reserved. Principal: Reynold Diaz.
             </div>
         </div>
     </footer>
 
 </body>
-
 </html>
